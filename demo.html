@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="libs/jquery.min.js"></script>
+<script src="libs/ccm.min.js"></script>
+<style>
+  #tutorial1, #tutorial2 { border: 1px solid black; }
+</style>
+<h3>Ergebnis von Tutorial 1: "Hello, World!"</h3>
+<div id="tutorial1"></div>
+<h3>Ergebnis von Tutorial 2: Chat</h3>
+<div id="tutorial2"></div>
+<script>
+  ccm.render( 'resources/ccm.blank.min.js', $( '#tutorial1' ) );
+  ccm.render( 'resources/ccm.chat.min.js', $( '#tutorial2' ) );
+</script>
