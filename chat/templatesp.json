@@ -1,4 +1,4 @@
-ccm.callback[ 'templates.js' ]( {
+ccm.callback[ 'templatesp.json' ]( {
   
   "main": {
     "tag": "div",
