@@ -24,8 +24,8 @@ ccm.component( {
   config: {
 
     context: true,
-    html: [ ccm.load, './json/user_html.json' ],
-    lang: [ ccm.instance, './components/lang.js', { store: [ ccm.store, './json/user_lang.json' ] } ],
+    html: [ ccm.load, 'https://kaul.inf.h-brs.de/ccm/jsonp/user_html.json' ],
+    lang: [ ccm.instance, 'https://kaul.inf.h-brs.de/ccm/components/lang.js', { store: [ ccm.store, 'https://kaul.inf.h-brs.de/ccm/jsonp/user_lang.json' ] } ],
     sign_on: 'hbrsinfkaul',
     text_login: 'lang#login',
     text_login_title: 'lang#login_title',
