@@ -1,4 +1,4 @@
-ccm.callback[ 'templatesp.json' ]( {
+ccm.callback[ 'ccm.chat.templates.json' ]( {
   
   "main": {
     "tag": "div",
