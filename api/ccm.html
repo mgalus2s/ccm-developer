@@ -72,7 +72,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line64">line 64</a>
+        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line66">line 66</a>
     </li></ul></dd>
     
 
@@ -100,9 +100,6 @@
         <h3 class="subsection-title">Namespaces</h3>
 
         <dl>
-            <dt><a href="ccm.context.html">context</a></dt>
-            <dd>context functions for traversing in a <i>ccm</i> context tree</dd>
-        
             <dt><a href="ccm.helper.html">helper</a></dt>
             <dd>helper functions for <i>ccm</i> component developers</dd>
         
@@ -168,7 +165,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line967">line 967</a>
+        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line969">line 969</a>
     </li></ul></dd>
     
 
@@ -195,10 +192,10 @@
 
     
 
-    <h4 class="name" id=".component"><span class="type-signature">(static) </span>component<span class="signature">(component, config<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.html#.component">ccm.component</a>}</span></h4>
+    <h4 class="name" id=".component"><span class="type-signature">(static) </span>component<span class="signature">(component, config<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.type.html#.component">ccm.type.component</a>}</span></h4>
 
     
-    <p class="summary">register component in <i>ccm</i> runtime environment</p>
+    <p class="summary">register <i>ccm</i> component in <i>ccm</i> runtime environment</p>
     
 
 
@@ -247,10 +244,10 @@
 <span class="param-type"><a href="ccm.type.html#.component">ccm.type.component</a></span>
 |
 
-<span class="param-type">ccm.url</span>
+<span class="param-type"><a href="ccm.type.html#.url">ccm.type.url</a></span>
 |
 
-<span class="param-type">ccm.index</span>
+<span class="param-type"><a href="ccm.type.html#.index">ccm.type.index</a></span>
 
 
             
@@ -268,7 +265,7 @@
 
             
 
-            <td class="description last">object, URL or index of <i>ccm</i> component</td>
+            <td class="description last">object, URL or index of a <i>ccm</i> component</td>
         </tr>
 
     
@@ -281,10 +278,7 @@
             <td class="type">
             
                 
-<span class="param-type">ccm.config</span>
-|
-
-<span class="param-type">function</span>
+<span class="param-type"><a href="ccm.type.html#.config">ccm.type.config</a></span>
 
 
             
@@ -304,7 +298,7 @@
 
             
 
-            <td class="description last">default <i>ccm</i> instance configuration, see documentation of associated component</td>
+            <td class="description last">default <i>ccm</i> instance configuration (check documentation of associated <i>ccm</i> component to see which properties could be set)</td>
         </tr>
 
     
@@ -337,7 +331,7 @@
 
             
 
-            <td class="description last">callback when <i>ccm</i> component is registered (first parameter is registered component)</td>
+            <td class="description last">callback when <i>ccm</i> component is registered (first parameter is the object of the registered <i>ccm</i> component)</td>
         </tr>
 
     
@@ -378,7 +372,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1457">line 1457</a>
+        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1458">line 1458</a>
     </li></ul></dd>
     
 
@@ -405,7 +399,7 @@
 
         
 <div class="param-desc">
-    object of <i>ccm</i> component (only if synchron)
+    object of the registered <i>ccm</i> component (only if synchron)
 </div>
 
 
@@ -416,7 +410,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="ccm.html#.component">ccm.component</a></span>
+<span class="param-type"><a href="ccm.type.html#.component">ccm.type.component</a></span>
 
 
     </dd>
@@ -427,17 +421,15 @@
 
     <h5>Examples</h5>
     
-    <pre class="prettyprint"><code>ccm.component( { index: 'counter-2.1.0', Instance: function () { ... } } );</code></pre>
+    <pre class="prettyprint"><code>ccm.component( { index: 'chat-2.1.3', Instance: function () { ... } } );</code></pre>
 
-    <pre class="prettyprint"><code>ccm.component( { name: 'counter', version: [1,8,2], Instance: function () { ... } } );</code></pre>
+    <pre class="prettyprint"><code>ccm.component( { name: 'chat', version: [2,1,3], Instance: function () {...} } );</code></pre>
 
-    <pre class="prettyprint"><code>ccm.component( { name: 'counter', Instance: function () { ... } } );</code></pre>
+    <pre class="prettyprint"><code>ccm.component( { name: 'blank', Instance: function () {...} } );</code></pre>
 
-    <pre class="prettyprint"><code>ccm.component( 'counter.js );</code></pre>
+    <pre class="prettyprint"><code>ccm.component( 'ccm.blank.js );</code></pre>
 
-    <pre class="prettyprint"><code>ccm.component( 'components/counter-1.3.4.js );</code></pre>
-
-    <pre class="prettyprint"><code>ccm.component( 'http://ccm.inf.h-brs.de/components/counter-1.0.0.js );</code></pre>
+    <pre class="prettyprint"><code>ccm.component( 'http://akless.github.io/ccm-developer/resources/ccm.chat.min.js' );</code></pre>
 
 
 
@@ -446,10 +438,10 @@
 
     
 
-    <h4 class="name" id=".dataset"><span class="type-signature">(static) </span>dataset<span class="signature">(settings, key<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>, user<span class="signature-attributes">opt</span>, password<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.html#.store">ccm.store</a>}</span></h4>
+    <h4 class="name" id=".dataset"><span class="type-signature">(static) </span>dataset<span class="signature">(settings<span class="signature-attributes">opt</span>, key<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.type.html#.dataset">ccm.type.dataset</a>}</span></h4>
 
     
-    <p class="summary">create <i>ccm</i> datastore and get dataset</p>
+    <p class="summary">get directly a <i>ccm</i> dataset out of a <i>ccm</i> datastore</p>
     
 
 
@@ -495,10 +487,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="ccm.html#.settings">ccm.settings</a></span>
-|
-
-<span class="param-type">function</span>
+<span class="param-type"><a href="ccm.type.html#.settings">ccm.type.settings</a></span>
 
 
             
@@ -506,6 +495,8 @@
 
             
                 <td class="attributes">
+                
+                    &lt;optional><br>
                 
 
                 
@@ -529,7 +520,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="ccm.html#.key">ccm.key</a></span>
+<span class="param-type"><a href="ccm.type.html#.key">ccm.type.key</a></span>
 
 
             
@@ -582,76 +573,7 @@
 
             
 
-            <td class="description last">callback when <i>ccm</i> datastore is created (first parameter is created <i>ccm</i> datastore)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>user</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type"><a href="ccm.html#.user">ccm.user</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">username or user instance for user authentication</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>password</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">password for user authentication</td>
+            <td class="description last">callback (first parameter is the requested <i>ccm</i> datastore)</td>
         </tr>
 
     
@@ -692,7 +614,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line2168">line 2168</a>
+        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line2157">line 2157</a>
     </li></ul></dd>
     
 
@@ -719,7 +641,7 @@
 
         
 <div class="param-desc">
-    created <i>ccm</i> datastore (only if synchron)
+    requested <i>ccm</i> dataset (only if synchron)
 </div>
 
 
@@ -730,7 +652,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="ccm.html#.store">ccm.store</a></span>
+<span class="param-type"><a href="ccm.type.html#.dataset">ccm.type.dataset</a></span>
 
 
     </dd>
@@ -745,10 +667,10 @@
 
     
 
-    <h4 class="name" id=".instance"><span class="type-signature">(static) </span>instance<span class="signature">(component, config<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.html#.instance">ccm.instance</a>}</span></h4>
+    <h4 class="name" id=".instance"><span class="type-signature">(static) </span>instance<span class="signature">(component, config<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.type.html#.instance">ccm.type.instance</a>}</span></h4>
 
     
-    <p class="summary">create instance out of component (all needed resources will be loaded if necessary)</p>
+    <p class="summary">creates an <i>ccm</i> instance out of a <i>ccm</i> component</p>
     
 
 
@@ -778,8 +700,6 @@
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -796,7 +716,10 @@
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type"><a href="ccm.type.html#.index">ccm.type.index</a></span>
+|
+
+<span class="param-type"><a href="ccm.type.html#.url">ccm.type.url</a></span>
 
 
             
@@ -813,12 +736,8 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">index or URL of component</td>
+            <td class="description last">index or URL of a <i>ccm</i> component</td>
         </tr>
 
     
@@ -831,10 +750,7 @@
             <td class="type">
             
                 
-<span class="param-type">ccm.config</span>
-|
-
-<span class="param-type">function</span>
+<span class="param-type"><a href="ccm.type.html#.config">ccm.type.config</a></span>
 
 
             
@@ -853,14 +769,8 @@
             
 
             
-                <td class="default">
-                
-                    {}
-                
-                </td>
-            
 
-            <td class="description last">instance configuration, see documentation of associated component</td>
+            <td class="description last"><i>ccm</i> instance configuration (check documentation of associated <i>ccm</i> component to see which properties could be set)</td>
         </tr>
 
     
@@ -892,12 +802,8 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">callback when instance is created (first parameter is created instance)</td>
+            <td class="description last">callback when <i>ccm</i> instance is created (first parameter is the created <i>ccm</i> instance)</td>
         </tr>
 
     
@@ -938,7 +844,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1565">line 1565</a>
+        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1561">line 1561</a>
     </li></ul></dd>
     
 
@@ -965,7 +871,7 @@
 
         
 <div class="param-desc">
-    created instance (only if synchron)
+    created <i>ccm</i> instance (only if synchron)
 </div>
 
 
@@ -976,7 +882,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="ccm.html#.instance">ccm.instance</a></span>
+<span class="param-type"><a href="ccm.type.html#.instance">ccm.type.instance</a></span>
 
 
     </dd>
@@ -985,13 +891,9 @@
     
 
 
-    <h5>Examples</h5>
+    <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// create instance for simple counter with range=6 and callback
-ccm.instance( 'components/counter.js', { range: 6 }, function ( instance ) { console.log( instance ); } );</code></pre>
-
-    <pre class="prettyprint"><code>// same example but cross domain
-ccm.instance( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', function ( instance ) { console.log( instance ); } );</code></pre>
+    <pre class="prettyprint"><code>ccm.instance( 'ccm.chat.js', { key: 'demo' }, function ( instance ) {...} );</code></pre>
 
 
 
@@ -1144,7 +1046,7 @@ ccm.instance( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', function (
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1005">line 1005</a>
+        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1007">line 1007</a>
     </li></ul></dd>
     
 
@@ -1193,29 +1095,29 @@ ccm.instance( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', function (
 
     <h5>Examples</h5>
     
-    <pre class="prettyprint"><code>// load ccm component for simple counter with callback (local path)
-ccm.load( 'components/counter.js', function ( component ) { console.log( component ); } );</code></pre>
+    <pre class="prettyprint"><code>// load ccm component with callback (local path)
+ccm.load( 'ccm.chat.js', function ( component ) {...} );</code></pre>
 
-    <pre class="prettyprint"><code>// load ccm component for rendering text character by character (cross domain)
-ccm.load( 'http://www.fh-lsoopjava.de/ccm/components/runningtext.js' );</code></pre>
+    <pre class="prettyprint"><code>// load ccm component without callback (cross domain)
+ccm.load( 'http://akless.github.io/ccm-developer/resources/ccm.chat.min.js' );</code></pre>
 
     <pre class="prettyprint"><code>// load javascript file (local path)
 ccm.load( 'scripts/helper.js' );</code></pre>
 
-    <pre class="prettyprint"><code>// load newest version of jQuery UI (cross domain)
+    <pre class="prettyprint"><code>// load jQuery UI (cross domain)
 ccm.load( 'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js' );</code></pre>
 
     <pre class="prettyprint"><code>// load css file (local path)
-ccm.load( 'css/quizz.css' );</code></pre>
+ccm.load( 'css/style.css' );</code></pre>
 
     <pre class="prettyprint"><code>// load image file (cross domain)
 ccm.load( 'http://www.fh-lsoopjava.de/ccm/img/dialogbox.png' );</code></pre>
 
     <pre class="prettyprint"><code>// load json file with callback (local path)
-ccm.load( 'json/quizz.json', function ( data ) { console.log( data ); } );</code></pre>
+ccm.load( 'json/data.json', function ( data ) { console.log( data ); } );</code></pre>
 
-    <pre class="prettyprint"><code>// load json file with callback (cross domain), json file must look like this: ccm.callback[ 'question.json' ]( {...} );
-ccm.load( 'http://www.fh-lsoopjava.de/ccm/jsonp/question.json', function ( data ) { console.log( data ); } );</code></pre>
+    <pre class="prettyprint"><code>// load json file with callback (cross domain), json file must look like this: ccm.callback[ 'ccm.chat.templates.min.json' ]( {...} );
+ccm.load( 'http://akless.github.io/ccm-developer/resources/ccm.chat.templates.min.json', function ( data ) {...} );</code></pre>
 
     <pre class="prettyprint"><code>// data exchange between client and server php interface with callback (cross domain), php file must use jsonp
 ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' } ], function ( response ) { console.log( response ); } );</code></pre>
@@ -1227,10 +1129,10 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
 
     
 
-    <h4 class="name" id=".render"><span class="type-signature">(static) </span>render<span class="signature">(component, config<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.html#.instance">ccm.instance</a>}</span></h4>
+    <h4 class="name" id=".render"><span class="type-signature">(static) </span>render<span class="signature">(component, config<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.type.html#.instance">ccm.type.instance</a>}</span></h4>
 
     
-    <p class="summary">render <i>ccm</i> instance in website area (all needed resources will be loaded if necessary)</p>
+    <p class="summary">render <i>ccm</i> instance in website area</p>
     
 
 
@@ -1260,8 +1162,6 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -1278,7 +1178,10 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type"><a href="ccm.type.html#.index">ccm.type.index</a></span>
+|
+
+<span class="param-type"><a href="ccm.type.html#.url">ccm.type.url</a></span>
 
 
             
@@ -1295,12 +1198,8 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">index or URL of <i>ccm</i> component</td>
+            <td class="description last">index or URL of a <i>ccm</i> component</td>
         </tr>
 
     
@@ -1313,10 +1212,7 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
             <td class="type">
             
                 
-<span class="param-type">ccm.config</span>
-|
-
-<span class="param-type">function</span>
+<span class="param-type"><a href="ccm.type.html#.config">ccm.type.config</a></span>
 
 
             
@@ -1335,14 +1231,8 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
             
 
             
-                <td class="default">
-                
-                    {}
-                
-                </td>
-            
 
-            <td class="description last"><i>ccm</i> instance configuration, see documentation of associated <i>ccm</i> component</td>
+            <td class="description last"><i>ccm</i> instance configuration (check documentation of associated <i>ccm</i> component to see which properties could be set)</td>
         </tr>
 
     
@@ -1374,12 +1264,8 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">callback when <i>ccm</i> instance is rendered (first parameter is <i>ccm</i> instance)</td>
+            <td class="description last">callback when <i>ccm</i> instance is rendered (first parameter is the rendered <i>ccm</i> instance)</td>
         </tr>
 
     
@@ -1420,7 +1306,7 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1934">line 1934</a>
+        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1925">line 1925</a>
     </li></ul></dd>
     
 
@@ -1447,7 +1333,7 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
 
         
 <div class="param-desc">
-    <i>ccm</i> instance (only if synchron)
+    rendered <i>ccm</i> instance (only if synchron)
 </div>
 
 
@@ -1458,7 +1344,7 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
     </dt>
     <dd>
         
-<span class="param-type"><a href="ccm.html#.instance">ccm.instance</a></span>
+<span class="param-type"><a href="ccm.type.html#.instance">ccm.type.instance</a></span>
 
 
     </dd>
@@ -1467,13 +1353,9 @@ ccm.load( [ 'http://www.fh-lsoopjava.de/ccm/php/greetings.php', { name: 'world' 
     
 
 
-    <h5>Examples</h5>
+    <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// render ccm instance for simple counter into div container with id="mydiv"
-ccm.render( 'components/counter.js', { element: jQuery( '#mydiv' ) } );</code></pre>
-
-    <pre class="prettyprint"><code>// same example but cross domain with counter range=6
-ccm.render( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', { range: 6 } );</code></pre>
+    <pre class="prettyprint"><code>ccm.render( 'ccm.blank.js', { element: jQuery( '#container' ) } );</code></pre>
 
 
 
@@ -1482,10 +1364,10 @@ ccm.render( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', { range: 6 }
 
     
 
-    <h4 class="name" id=".store"><span class="type-signature">(static) </span>store<span class="signature">(settings<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.html#.store">ccm.store</a>}</span></h4>
+    <h4 class="name" id=".store"><span class="type-signature">(static) </span>store<span class="signature">(settings<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="ccm.type.html#.store">ccm.type.store</a>}</span></h4>
 
     
-    <p class="summary">create <i>ccm</i> datastore or get existing <i>ccm</i> datastore if it have the same source</p>
+    <p class="summary">use of a <i>ccm</i> datastore</p>
     
 
 
@@ -1531,10 +1413,7 @@ ccm.render( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', { range: 6 }
             <td class="type">
             
                 
-<span class="param-type"><a href="ccm.html#.settings">ccm.settings</a></span>
-|
-
-<span class="param-type">function</span>
+<span class="param-type"><a href="ccm.type.html#.settings">ccm.type.settings</a></span>
 
 
             
@@ -1554,7 +1433,7 @@ ccm.render( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', { range: 6 }
 
             
 
-            <td class="description last"><i>ccm</i> datastore settings (or callback if skiped)</td>
+            <td class="description last"><i>ccm</i> datastore settings</td>
         </tr>
 
     
@@ -1587,7 +1466,7 @@ ccm.render( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', { range: 6 }
 
             
 
-            <td class="description last">callback when <i>ccm</i> datastore is created (first parameter is created <i>ccm</i> datastore)</td>
+            <td class="description last">callback when <i>ccm</i> datastore is ready for use (first parameter is the ready <i>ccm</i> datastore)</td>
         </tr>
 
     
@@ -1628,7 +1507,7 @@ ccm.render( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', { range: 6 }
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1973">line 1973</a>
+        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line1964">line 1964</a>
     </li></ul></dd>
     
 
@@ -1655,7 +1534,7 @@ ccm.render( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', { range: 6 }
 
         
 <div class="param-desc">
-    created <i>ccm</i> datastore (only if synchron)
+    ready <i>ccm</i> datastore (only if synchron)
 </div>
 
 
@@ -1666,7 +1545,7 @@ ccm.render( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', { range: 6 }
     </dt>
     <dd>
         
-<span class="param-type"><a href="ccm.html#.store">ccm.store</a></span>
+<span class="param-type"><a href="ccm.type.html#.store">ccm.type.store</a></span>
 
 
     </dd>
@@ -1681,1274 +1560,22 @@ ccm.render( 'http://www.fh-lsoopjava.de/ccm/components/counter.js', { range: 6 }
 ccm.store();</code></pre>
 
     <pre class="prettyprint"><code>// create ccm datastore using local cache with initial datasets by json file (asynchron)
-ccm.store( { local: 'json/quizz.json' } );</code></pre>
+ccm.store( { local: 'templates.json' } );</code></pre>
 
-    <pre class="prettyprint"><code>// same example but cross domain, json file must look like this: ccm.callback[ 'question.json' ]( {...} );
-ccm.store( { local: 'http://www.fh-lsoopjava.de/ccm/jsonp/question.json' } );</code></pre>
+    <pre class="prettyprint"><code>// same example but cross domain, json file must look like this: ccm.callback[ 'ccm.chat.templates.min.json' ]( {...} );
+ccm.store( { local: 'http://akless.github.io/ccm-developer/resources/ccm.chat.templates.min.json' } );</code></pre>
 
     <pre class="prettyprint"><code>// create ccm datastore using clientside database IndexedDB (asynchron)
-ccm.store( { store: 'test' } );</code></pre>
+ccm.store( { store: 'chat' } );</code></pre>
 
-    <pre class="prettyprint"><code>// create ccm datastore using serverside database (asynchron), php file must be an ccm compatible interface
-ccm.store( { url: 'http://www.fh-lsoopjava.de/ccm/php/interface.php' } );</code></pre>
+    <pre class="prettyprint"><code>// create ccm datastore using serverside database (asynchron), the file index.js must be an &lt;i>ccm&lt;/i> compatible interface
+ccm.store( { store: 'chat', url: 'ws://ccm2.inf.h-brs.de/index.js' } );</code></pre>
 
 
 
         
     
 
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        
-                
-<h4 class="name" id=".db">db</h4>
-
-
-<p class="summary">IndexedDB database</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3260">line 3260</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id=".html">html</h4>
-
-
-<p class="summary"><i>ccm</i> html data - TODO: explain properties of <i>ccm</i> html data</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3265">line 3265</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id=".instance">instance</h4>
-
-
-<p class="summary"><i>ccm</i> instance</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><i>ccm</i> instance id (unique in own component)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>index</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><i>ccm</i> instance index (unique in <i>ccm</i> runtime environment)<br>A <i>ccm</i> instance index is made up of own <a href="ccm.html#.component">component name</a> and own <a href="ccm.html#.instance">id</a> (example: <code>"chat-1"</code>).</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>component</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ccm.html#.component">ccm.component</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">reference to associated component</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>self</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ccm.html#.instance">ccm.instance</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">own context (private)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>element</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">ccm.element</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">own website area</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>classes</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">html classes of website area for own content (default is: <code>"ccm-"+<a href="ccm.html#.component">component_name</a></code>)<br>Each content website area of a <i>ccm</i> instance have the additional html class <code>"ccm"</code>.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>style</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ccm.html#.style">ccm.style</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">css style of website area for own content</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>init</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">callback when this instance is created and not rendered yet</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>render</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">render content in own website area</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3270">line 3270</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id=".JqXHR">JqXHR</h4>
-
-
-<p class="summary">"jQuery XMLHttpRequest" object</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3284">line 3284</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id=".key">key</h4>
-
-
-<p class="summary">key of a <i>ccm</i> dataset (unique in the <i>ccm</i> datastore which contains the dataset)</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">string</span>
-|
-
-<span class="param-type">number</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3289">line 3289</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id=".regex">regex</h4>
-
-
-<p class="summary">regular expression</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3294">line 3294</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-    <h5>Examples</h5>
-    
-    <pre class="prettyprint"><code>var regex = /^[A-Z][a-z]*$/g;</code></pre>
-
-    <pre class="prettyprint"><code>var regex = new RegExp( '^[A-Z][a-z]*$', 'g' );</code></pre>
-
-
-
-            
-                
-<h4 class="name" id=".settings">settings</h4>
-
-
-<p class="summary"><i>ccm</i> datastore settings</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>local</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">ccm.datasets</span>
-|
-
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">collection of <i>ccm</i> datasets or URL to server interface that deliver initial datasets for local cache</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>store</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">object store name in clientside database IndexedDB that has to be used</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>url</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">server interface URL to serverside database that has to be used</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>user</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type"><a href="ccm.html#.user">ccm.user</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">username or user instance for user authentication</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>password</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">password for user authentication</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3301">line 3301</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id=".source">source</h4>
-
-
-<p class="summary"><i>ccm</i> datastore source - TODO: explain forms of <i>ccm</i> datastore sources</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">string</span>
-|
-
-<span class="param-type">object</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3311">line 3311</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
-                
-<h4 class="name" id=".style">style</h4>
-
-
-<p class="summary"><i>ccm</i> instance css dependency - TODO: more than an url for <i>ccm</i> instance css dependency</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Array</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3316">line 3316</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>[ ccm.load, 'css/style.css' ]</code></pre>
-
-
-
-            
-                
-<h4 class="name" id=".user">user</h4>
-
-
-<p class="summary"><i>ccm</i> user instance</p>
-
-
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type"><a href="ccm.html#.instance">ccm.instance</a></span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>key</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ccm.html#.key">ccm.key</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">user dataset key (username)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>login</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">login user</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>logout</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">logout user</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>isLoggedIn</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">checks if user is logged in</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>addObserver</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">add an observer for login and logout event</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ccm.js.html">ccm.js</a>, <a href="ccm.js.html#line3322">line 3322</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-            
     
 
     
@@ -2962,13 +1589,13 @@ ccm.store( { url: 'http://www.fh-lsoopjava.de/ccm/php/interface.php' } );</code>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="ccm.html">ccm</a></li><li><a href="ccm.context.html">context</a></li><li><a href="ccm.helper.html">helper</a></li><li><a href="ccm.type.html">type</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="ccm.html">ccm</a></li><li><a href="ccm.helper.html">helper</a></li><li><a href="ccm.type.html">type</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu May 19 2016 12:17:20 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu May 19 2016 14:11:58 GMT+0200 (CEST)
 </footer>
 
 <script> prettyPrint(); </script>
