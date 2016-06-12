@@ -1,3 +1,4 @@
 .idea/
-/ccm.js
-/api/ccm/ccm.js.html
+resources/ccm/
+resources/user/
+ccm.js

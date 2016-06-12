@@ -156,6 +156,609 @@
     
 
     
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        <dl>
+                
+<hr>
+<dt class="name" id=".config">
+    <h4>config</h4>
+
+    
+    <p class="summary"><i>ccm</i> instance configuration</p>
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">ccm.types.config</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ccm.types.element</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p><i>ccm</i> instance website area</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>html</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ccm.types.dependency</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p><i>ccm</i> datastore for html templates</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>style</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ccm.types.url</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>URL to a css file which contains the styles for own website area</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>classes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>html classes for own website area</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>store</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ccm.types.dependency</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p><i>ccm</i> datastore that contains the <a href="ccm.components.chat.types.html#.dataset">dataset for rendering</a></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ccm.types.key</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>key of <a href="ccm.components.chat.types.html#.dataset">dataset for rendering</a></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>user</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ccm.types.dependency</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p><i>ccm</i> instance for user authentification</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">{
+  element: jQuery( &#x27;body&#x27; ),
+  html:    [ ccm.store, { local: &#x27;./templates.json&#x27; } ],
+  style:   [ ccm.load, &#x27;./style.css&#x27; ],
+  classes: &#x27;ccm-chat&#x27;,
+  store:   [ ccm.store, { url: &#x27;ws://ccm2.inf.h-brs.de/index.js&#x27;, store: &#x27;chat&#x27; } ],
+  key:     &#x27;test&#x27;,
+  user:    [ ccm.instance, &#x27;https://kaul.inf.h-brs.de/ccm/components/user2.js&#x27; ]
+}</pre>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id=".dataset">
+    <h4>dataset</h4>
+
+    
+    <p class="summary">dataset for rendering</p>
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">ccm.types.dataset</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ccm.types.key</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>dataset key</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>messages</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="ccm.components.chat.types.html#.message">ccm.components.chat.types.message</a>></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>already existing <a href="ccm.components.chat.types.html#.message">message dataset</a>s</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">{
+  key: &#x27;test&#x27;,
+  messages: [
+    {
+      text: &#x27;Hello, World!&#x27;,
+      user: &#x27;akless&#x27;
+    },
+    {
+      text: &#x27;My second message.&#x27;,
+      user: &#x27;akless&#x27;
+    }
+  ]
+}</pre>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id=".message">
+    <h4>message</h4>
+
+    
+    <p class="summary">message dataset</p>
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">ccm.types.dataset</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>text</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>message text</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>user</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>username of creator</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">{
+  text: &#x27;Hello, World!&#x27;,
+  user: &#x27;akless&#x27;
+}</pre>
+
+
+    
+</dd>
+
+            </dl>
+    
 
     
 </article>
@@ -200,7 +803,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on June 6th 2016, 3:47:14 pm
+		on June 12th 2016, 5:28:58 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

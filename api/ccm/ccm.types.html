@@ -37,6 +37,13 @@
 				</ul>
 			</li>
 			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="ccm.Datastore.html">ccm.Datastore</a></li>
+				</ul>
+			</li>
+			
 		</ul>
 		<div class="col-sm-3 col-md-3">
             <form class="navbar-form" role="search">
@@ -682,7 +689,7 @@
             <td class="type">
             
                 
-<span class="param-type"><a href="ccm.types.html#.url">ccm.types.url</a></span>
+<span class="param-type"><a href="ccm.types.html#.dependency">ccm.types.dependency</a></span>
 
 
 
@@ -693,7 +700,7 @@
 
             
 
-            <td class="description last"><p>URL to a css file which contains the styles for own website area</p></td>
+            <td class="description last"><p>CSS styles for own website area</p></td>
         </tr>
 
     
@@ -1073,6 +1080,138 @@
             
                 
 <hr>
+<dt>
+    <h4 class="name" id=".delResult"><span class="type-signature"></span>delResult(result)</h4>
+    
+    
+    <p class="summary">callback when an delete operation is finished</p>
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>result</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.dataset">ccm.types.dataset</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>deleted dataset</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">function () { console.log( result ); }</pre>
+
+
+    
+</dd>
+
+            
+                
+<hr>
 <dt class="name" id=".dependency">
     <h4>dependency</h4>
 
@@ -1233,6 +1372,141 @@
     <pre class="sunlight-highlight-javascript">var element = jQuery( &#x27;#menu&#x27; );</pre>
 
     <pre class="sunlight-highlight-javascript">var element = jQuery( &#x27;.entry&#x27; );</pre>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt>
+    <h4 class="name" id=".getResult"><span class="type-signature"></span>getResult(result)</h4>
+    
+    
+    <p class="summary">callback when a read operation is finished</p>
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>result</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.dataset">ccm.types.dataset</a></span>
+|
+
+<span class="param-type">Array.&lt;<a href="ccm.types.html#.dataset">ccm.types.dataset</a>></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>requested dataset(s)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">function ( result ) { console.log( result ) }</pre>
 
 
     
@@ -1468,7 +1742,31 @@
 
             
 
-            <td class="description last"><p>callback when this <i>ccm</i> instance is created and not rendered yet</p></td>
+            <td class="description last"><p>callback when this <i>ccm</i> instance is created and before dependencies of dependent resources are solved</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ready</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>callback when all dependencies of dependent resources are solved</p></td>
         </tr>
 
     
@@ -1869,6 +2167,138 @@
             
                 
 <hr>
+<dt>
+    <h4 class="name" id=".setResult"><span class="type-signature"></span>setResult(result)</h4>
+    
+    
+    <p class="summary">callback when an create or update operation is finished</p>
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>result</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.dataset">ccm.types.dataset</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>created or updated dataset</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">function ( result ) { console.log( result ) }</pre>
+
+
+    
+</dd>
+
+            
+                
+<hr>
 <dt class="name" id=".settings">
     <h4>settings</h4>
 
@@ -2046,7 +2476,7 @@
     <h4>source</h4>
 
     
-    <p class="summary"><i>ccm</i> datastore source - TODO: explain forms of <i>ccm</i> datastore sources</p>
+    <p class="summary"><i>ccm</i> datastore source - TODO: explain forms of <i>ccm</i> datasstore sources</p>
     
 </dt>
 <dd>
@@ -2593,7 +3023,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on June 6th 2016, 8:35:42 pm
+		on June 12th 2016, 5:28:58 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

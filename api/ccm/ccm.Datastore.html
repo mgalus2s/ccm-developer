@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Class: Datastore</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="ccm.html">ccm</a></li><li><a href="ccm.helper.html">ccm.helper</a></li><li><a href="ccm.types.html">ccm.types</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="ccm.Datastore.html">ccm.Datastore</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+		<div class="col-sm-3 col-md-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: Datastore</h1>
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="ccm.html">ccm</a>.</span>
+        
+        Datastore
+        </h2>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="Datastore"><span class="type-signature"></span>new Datastore()</h4>
+    
+    
+    <p class="summary">constructor for creating <i>ccm</i> datastores (private class)</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>See <a href="@link https://github.com/akless/ccm-developer/wiki/Data-Management">this wiki page</a> for general informations about <i>ccm</i> data management.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="del"><span class="type-signature"></span>del(key [, callback])</h4>
+    
+    
+    <p class="summary">delete a stored dataset</p>
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.key">ccm.types.key</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>unique key of the dataset</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.delResult">ccm.types.delResult</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>when data operation is finished</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>deleted dataset (only if no inner operation is asynchron)</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="ccm.types.html#.dataset">ccm.types.dataset</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Examples</h5>
+        
+    <pre class="sunlight-highlight-javascript">// delete dataset with unique key &#x27;test&#x27;
+store.del( &#x27;test&#x27;, function ( result ) {
+  console.log( result );                  // { key: &#x27;test&#x27;, ... }
+} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// delete dataset with unique key 4711
+store.del( 4711, function ( result ) {
+  console.log( result );                  // { key: 4711, ... }
+} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// get result as return value (only if no inner operation is asynchron)
+var result = store.del( &#x27;test&#x27; );
+console.log( result );</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="get"><span class="type-signature"></span>get( [key_or_query] [, callback])</h4>
+    
+    
+    <p class="summary">get one or more stored datasets</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>There are two ways to use this method depending on the first parameter.
+The first way is to get a single dataset with a given key.
+The second way is to get all datasets that matches a given query.
+With no first parameter the method provides an array with all stored datasets.
+In this case the callback could be the first parameter directly.
+Getting all stored datasets counts as a query and don't work if the chosen data level not supports queries.
+See <a href="https://github.com/akless/ccm-developer/wiki/Data-Management#supported-operations">table of supported operations</a> to check this.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key_or_query</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.key">ccm.types.key</a></span>
+|
+
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>unique key of the dataset or alternative a query</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.getResult">ccm.types.getResult</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>when data operation is finished</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>requested dataset(s) (only if no inner operation is asynchron)</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="ccm.types.html#.dataset">ccm.types.dataset</a></span>
+|
+
+<span class="param-type">Array.&lt;<a href="ccm.types.html#.dataset">ccm.types.dataset</a>></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Examples</h5>
+        
+    <pre class="sunlight-highlight-javascript">// get array of all stored datasets
+store.get( function ( result ) {
+  console.log( result );                  // [ { key: ..., ... }, ... ]
+} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// get single dataset with unique key &#x27;test&#x27;
+store.get( &#x27;test&#x27;, function ( result ) {
+  console.log( result );                  // { key: &#x27;test&#x27;, ... }
+} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// get single dataset with unique key 4711
+store.get( 4711, function ( result ) {
+  console.log( result );                  // { key: 4711, ... }
+} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// get array of all stored datasets that match the given query
+store.get( {
+  author: &#x27;akless&#x27;,        // This query selects all datasets that have a property &#x27;author&#x27;
+  year: 2015               // with value &#x27;akless&#x27; and a property &#x27;year&#x27; with value &#x27;2015&#x27;.
+}, function ( result ) {
+  console.log( result );   // [ { key: ..., author: &#x27;akless&#x27;, year: 2015, ... }, ... ]
+} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// get result as return value (only if no inner operation is asynchron)
+var result = store.get();
+console.log( result );</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="set"><span class="type-signature"></span>set(priodata [, callback])</h4>
+    
+    
+    <p class="summary">create or update a dataset</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>If the given priority data has no key property, than the priority data will be set as a new dataset with a generated key.
+If the given priority data contains a value for the key property and a dataset with that given key already exists in the datastore, than that dataset will be updated with the given priority data.
+If no dataset with that given key exists, than the priority data will be set as a new dataset with the given key.
+For more informations about <a href="ccm.helper.html#.integrate">priority data</a> or <a href="ccm.helper.html#.generateKey">automatic generation of unique keys</a> see the given links.
+The example for a deeper property update don't work if the chosen data level not supports deep partial updates.
+See <a href="https://github.com/akless/ccm-developer/wiki/Data-Management#supported-operations">table of supported operations</a> to check this.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>priodata</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.dataset">ccm.types.dataset</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>priority data</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.setResult">ccm.types.setResult</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>when data operation is finished</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>created or updated dataset (only if no inner operation is asynchron)</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="ccm.types.html#.dataset">ccm.types.dataset</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Examples</h5>
+        
+    <pre class="sunlight-highlight-javascript">// store a new dataset with a automatic generated unique key
+store.set( {
+  question: &#x27;my question&#x27;,           // The priority data don&#x27;t
+  answers: [ &#x27;answer1&#x27;, &#x27;answer2&#x27; ]  // contains a property &#x27;key&#x27;.
+}, function ( result ) {
+  console.log( result );   // { key: 1465718723761X7117581531745409, question: ..., answers: ... }
+} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// create a new dataset with unique key &#x27;test&#x27;
+store.set( {
+  key: &#x27;test&#x27;,             // Creates a new dataset if a dataset with unique key &#x27;test&#x27; already exists
+  value: &#x27;foo&#x27;             // in the datastore. Otherwise the existing dataset will be updated.
+}, function ( result ) {
+  console.log( result );   // { key: &#x27;test&#x27;, value: &#x27;foo&#x27; }
+} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// updates a deeper property of a stored dataset
+store.set( {
+  key: &#x27;test&#x27;,
+  &#x27;feedback.user.comment&#x27;: &#x27;My comment&#x27;
+}, function ( result ) {
+  console.log( result );   // { key: &#x27;test&#x27;, feedback: { user: { comment: &#x27;My comment&#x27;, ... }, ... }, ... }
+} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// get result as return value (only if no inner operation is asynchron)
+var result = store.set( { key: &#x27;test&#x27;, value: &#x27;foo&#x27; } );
+console.log( result );</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+<div class="modal fade" id="searchResults">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Search results</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
+	
+		on June 12th 2016, 5:28:58 pm
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+<script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		SearcherDisplay.init();
+	});
+</script>
+
+</body>
+</html>
