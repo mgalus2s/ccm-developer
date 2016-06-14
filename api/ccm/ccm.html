@@ -491,236 +491,6 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".dataset"><span class="type-signature">&lt;static> </span>dataset( [settings] [, key] [, callback])</h4>
-    
-    
-    <p class="summary">get directly a <i>ccm</i> dataset out of a <i>ccm</i> datastore</p>
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>settings</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ccm.types.html#.settings">ccm.types.settings</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p><i>ccm</i> datastore settings</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>key</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ccm.types.html#.key">ccm.types.key</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p><i>ccm</i> dataset key (default: get complete local cache)</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>callback (first parameter is the requested <i>ccm</i> datastore)</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>requested <i>ccm</i> dataset (only if synchron)</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="ccm.types.html#.dataset">ccm.types.dataset</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id=".instance"><span class="type-signature">&lt;static> </span>instance(component [, config] [, callback])</h4>
     
     
@@ -1426,11 +1196,18 @@ ccm.load( [ &#x27;http://www.fh-lsoopjava.de/ccm/php/greetings.php&#x27;, { name
     <h4 class="name" id=".store"><span class="type-signature">&lt;static> </span>store( [settings] [, callback])</h4>
     
     
-    <p class="summary">use of a <i>ccm</i> datastore</p>
+    <p class="summary">provides a <i>ccm</i> datastore</p>
     
 </dt>
 <dd>
 
+    
+    <div class="description">
+        <p>A <i>ccm</i> datastore could be used for easy data management on different switchable data levels.
+With no first parameter the method provides a empty <i>ccm</i> datastore of data level 1.
+In this case the callback could be the first parameter directly.
+See <a href="https://github.com/akless/ccm-developer/wiki/Data-Management">this wiki page</a> for general informations about <i>ccm</i> data management.</p>
+    </div>
     
 
     
@@ -1493,7 +1270,7 @@ ccm.load( [ &#x27;http://www.fh-lsoopjava.de/ccm/php/greetings.php&#x27;, { name
 
             
 
-            <td class="description last"><p><i>ccm</i> datastore settings</p></td>
+            <td class="description last"><p><i>ccm</i> datastore settings (see <a href="ccm.types.html#.settings">here</a> for more details)</p></td>
         </tr>
 
     
@@ -1506,7 +1283,7 @@ ccm.load( [ &#x27;http://www.fh-lsoopjava.de/ccm/php/greetings.php&#x27;, { name
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type"><a href="ccm.types.html#.storeResult">ccm.types.storeResult</a></span>
 
 
 
@@ -1527,7 +1304,7 @@ ccm.load( [ &#x27;http://www.fh-lsoopjava.de/ccm/php/greetings.php&#x27;, { name
 
             
 
-            <td class="description last"><p>callback when <i>ccm</i> datastore is ready for use (first parameter is the ready <i>ccm</i> datastore)</p></td>
+            <td class="description last"><p>when datastore is ready for use</p></td>
         </tr>
 
     
@@ -1591,7 +1368,7 @@ ccm.load( [ &#x27;http://www.fh-lsoopjava.de/ccm/php/greetings.php&#x27;, { name
     
             
 <div class="param-desc">
-    <p>ready <i>ccm</i> datastore (only if synchron)</p>
+    <p><i>ccm</i> datastore (only if no inner operation is asynchron)</p>
 </div>
 
 
@@ -1615,20 +1392,18 @@ ccm.load( [ &#x27;http://www.fh-lsoopjava.de/ccm/php/greetings.php&#x27;, { name
     
         <h5>Examples</h5>
         
-    <pre class="sunlight-highlight-javascript">// create empty ccm datastore using local cache (synchron)
-ccm.store();</pre>
+    <pre class="sunlight-highlight-javascript">// get result as first parameter of the callback
+var settings = {...};
+ccm.store( settings, function ( result ) { console.log( result ); } );</pre>
 
-    <pre class="sunlight-highlight-javascript">// create ccm datastore using local cache with initial datasets by json file (asynchron)
-ccm.store( { local: &#x27;templates.json&#x27; } );</pre>
+    <pre class="sunlight-highlight-javascript">// get result as return value (only if no inner operation is asynchron)
+var settings = {...};
+var result = ccm.store( settings );
+console.log( result );</pre>
 
-    <pre class="sunlight-highlight-javascript">// same example but cross domain, json file must look like this: ccm.callback[ &#x27;ccm.chat.templates.min.json&#x27; ]( {...} );
-ccm.store( { local: &#x27;http://akless.github.io/ccm-developer/resources/ccm.chat.templates.min.json&#x27; } );</pre>
-
-    <pre class="sunlight-highlight-javascript">// create ccm datastore using clientside database IndexedDB (asynchron)
-ccm.store( { store: &#x27;chat&#x27; } );</pre>
-
-    <pre class="sunlight-highlight-javascript">// create ccm datastore using serverside database (asynchron), the file index.js must be an &lt;i&gt;ccm&lt;/i&gt; compatible interface
-ccm.store( { store: &#x27;chat&#x27;, url: &#x27;ws://ccm2.inf.h-brs.de/index.js&#x27; } );</pre>
+    <pre class="sunlight-highlight-javascript">// provides a empty &lt;i&gt;ccm&lt;/i&gt; datastore of data level 1
+ccm.store( function ( result ) { console.log( result ); } );
+// without given settings the callback could be the first parameter directly</pre>
 
 
     
@@ -1682,7 +1457,7 @@ ccm.store( { store: &#x27;chat&#x27;, url: &#x27;ws://ccm2.inf.h-brs.de/index.js
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on June 13th 2016, 12:17:58 pm
+		on June 14th 2016, 6:35:58 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

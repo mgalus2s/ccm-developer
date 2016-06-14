@@ -2313,6 +2313,15 @@ There are no conventions for other properties. They can be as they want.</p>
 </dt>
 <dd>
     
+    <div class="description">
+        <p>Settings for a <i>ccm</i> datastore.
+For more informations about providing a <i>ccm</i> datastore see the <a href="ccm.html#.store">documentation of the method 'ccm.store'</a>.
+The data level in which the stored datasets will managed is dependent on the existing properties in the datastore settings.
+No property 'store' results in a <i>ccm</i> datastore of data level 1.
+An existing property 'store' results in a <i>ccm</i> datastore of data level 2.
+An existing property 'store' and 'url' results in a <i>ccm</i> datastore of data level 3.</p>
+    </div>
+    
 
     
         <h5>Type:</h5>
@@ -2377,7 +2386,7 @@ There are no conventions for other properties. They can be as they want.</p>
 
             
 
-            <td class="description last"><p>collection of <i>ccm</i> datasets or URL to a json file that deliver initial datasets for local cache</p></td>
+            <td class="description last"><p>collection of initial <i>ccm</i> datasets or URL to a json file that deliver initial datasets for local cache (see <a href="ccm.Datastore.html#local">here</a> for more details)</p></td>
         </tr>
 
     
@@ -2401,7 +2410,7 @@ There are no conventions for other properties. They can be as they want.</p>
 
             
 
-            <td class="description last"><p>datastore name in database</p></td>
+            <td class="description last"><p>datastore name in database (see <a href="ccm.Datastore.html#store">here</a> for more details)</p></td>
         </tr>
 
     
@@ -2425,7 +2434,31 @@ There are no conventions for other properties. They can be as they want.</p>
 
             
 
-            <td class="description last"><p>server interface URL to serverside database that has to be used</p></td>
+            <td class="description last"><p>URL to an <i>ccm</i> compatible server interface (see <a href="ccm.Datastore.html#url">here</a> for more details)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>callback when server informs about changed stored datasets (see <a href="ccm.Datastore.html#onChange">here</a> for more details)</p></td>
         </tr>
 
     
@@ -2469,6 +2502,57 @@ There are no conventions for other properties. They can be as they want.</p>
 
 	
 </dl>
+
+
+    
+        <h5>Examples</h5>
+        
+    <pre class="sunlight-highlight-javascript">// provides a ccm datastore of data level 1 with initial datasets from a JSON file
+{
+  local: &#x27;templates.json&#x27;
+}</pre>
+
+    <pre class="sunlight-highlight-javascript">// same example but cross domain
+{
+  local: &#x27;http://akless.github.io/ccm-developer/resources/chat/templates.json&#x27;
+}
+// cross domain only works if json file looks like this: ccm.callback[ &#x27;templates.json&#x27; ]( {...} );</pre>
+
+    <pre class="sunlight-highlight-javascript">// provides a ccm datastore of data level 1 with directly given initial datasets
+{
+  local: {
+    &quot;demo&quot;: {
+      &quot;key&quot;: &quot;demo&quot;,
+      &quot;text&quot;: &quot;Hello, World!&quot;,
+      &quot;value&quot;: &quot;4711&quot;
+    },
+    &quot;test&quot;: {
+      &quot;key&quot;: &quot;test&quot;,
+      &quot;text&quot;: &quot;My test dataset.&quot;,
+      &quot;value&quot;: &quot;abc&quot;
+    }
+  }
+}</pre>
+
+    <pre class="sunlight-highlight-javascript">// provides a ccm datastore of data level 2
+{
+  store: &#x27;chat&#x27;
+}</pre>
+
+    <pre class="sunlight-highlight-javascript">// provides a ccm datastore of data level 3 using HTTP
+{
+  store: &#x27;chat&#x27;,                              // The file interface.php must be
+  url: &#x27;http://path/to/server/interface.php&#x27;  // an ccm compatible server interface
+}</pre>
+
+    <pre class="sunlight-highlight-javascript">// provides a ccm realtime datastore of data level 3 using WebSocket
+{
+  store: &#x27;chat&#x27;,                              // The file interface.php must be
+  url: &#x27;ws://path/to/server/interface.php&#x27;,   // an ccm compatible server interface
+  onChange: function () {
+    console.log( arguments );  // Shows the server informations about changed
+  }                            // stored datasets in the developer console.
+}</pre>
 
 
     
@@ -2541,6 +2625,138 @@ There are no conventions for other properties. They can be as they want.</p>
 
 	
 </dl>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt>
+    <h4 class="name" id=".storeResult"><span class="type-signature"></span>storeResult(store)</h4>
+    
+    
+    <p class="summary">callback when a provided datastore is ready for use</p>
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>store</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.Datastore.html">ccm.Datastore</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p><i>ccm<i/> datastore</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">function ( store ) { console.log( store ) }</pre>
 
 
     
@@ -2748,7 +2964,7 @@ There are no conventions for other properties. They can be as they want.</p>
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on June 13th 2016, 12:17:58 pm
+		on June 14th 2016, 6:35:58 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
