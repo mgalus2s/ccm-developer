@@ -820,7 +820,7 @@
 
             
 
-            <td class="description last"><p><i>ccm</i> instance for user authentification</p></td>
+            <td class="description last"><p><i>ccm</i> instance for user authentication</p></td>
         </tr>
 
     
@@ -2386,7 +2386,8 @@ An existing property 'store' and 'url' results in a <i>ccm</i> datastore of data
 
             
 
-            <td class="description last"><p>collection of initial <i>ccm</i> datasets or URL to a json file that deliver initial datasets for local cache (see <a href="ccm.Datastore.html#local">here</a> for more details)</p></td>
+            <td class="description last"><p>Collection of initial <i>ccm</i> datasets or URL to a json file that deliver initial datasets for local cache.
+See <a href="https://github.com/akless/ccm-developer/wiki/Data-Management#data-caching">this wiki page</a> for more informations about this kind of data caching.</p></td>
         </tr>
 
     
@@ -2410,7 +2411,10 @@ An existing property 'store' and 'url' results in a <i>ccm</i> datastore of data
 
             
 
-            <td class="description last"><p>datastore name in database (see <a href="ccm.Datastore.html#store">here</a> for more details)</p></td>
+            <td class="description last"><p>Name of the datastore in the database.
+Dependent on the specific database the datastore has different designations.
+For example in IndexedDB this is the name of the Object Store, in MongoDB the name of the Document Store and in MySQL the name of the Table.
+This property is not relevant for the first data level. It is only relevant for higher data levels.</p></td>
         </tr>
 
     
@@ -2434,7 +2438,33 @@ An existing property 'store' and 'url' results in a <i>ccm</i> datastore of data
 
             
 
-            <td class="description last"><p>URL to an <i>ccm</i> compatible server interface (see <a href="ccm.Datastore.html#url">here</a> for more details)</p></td>
+            <td class="description last"><p>URL to an <i>ccm</i> compatible server interface.
+This property is only relevant for the third data level.
+See <a href="https://github.com/akless/ccm-developer/wiki/Data-Management#server-interface">this wiki page</a> for more informations about an <i>ccm</i> compatible server interface.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>db</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>database (in case of a server that offers more than one database)</p></td>
         </tr>
 
     
@@ -2458,7 +2488,33 @@ An existing property 'store' and 'url' results in a <i>ccm</i> datastore of data
 
             
 
-            <td class="description last"><p>callback when server informs about changed stored datasets (see <a href="ccm.Datastore.html#onChange">here</a> for more details)</p></td>
+            <td class="description last"><p>Callback when server informs about changed stored datasets.
+This property is only relevant for the third data level with real-time communication.
+See <a href="https://github.com/akless/ccm-developer/wiki/Data-Management#real-time-communication">this wiki page</a> for more informations.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>user</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ccm.types.html#.instance">ccm.types.instance</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p><i>ccm</i> instance for user authentication (not documented yet) | TODO: Wiki page for datastore security</p></td>
         </tr>
 
     
@@ -2507,6 +2563,9 @@ An existing property 'store' and 'url' results in a <i>ccm</i> datastore of data
     
         <h5>Examples</h5>
         
+    <pre class="sunlight-highlight-javascript">// provides a empty ccm datastore of data level 1
+{}</pre>
+
     <pre class="sunlight-highlight-javascript">// provides a ccm datastore of data level 1 with initial datasets from a JSON file
 {
   local: &#x27;templates.json&#x27;
@@ -2553,78 +2612,6 @@ An existing property 'store' and 'url' results in a <i>ccm</i> datastore of data
     console.log( arguments );  // Shows the server informations about changed
   }                            // stored datasets in the developer console.
 }</pre>
-
-
-    
-</dd>
-
-            
-                
-<hr>
-<dt class="name" id=".source">
-    <h4>source</h4>
-
-    
-    <p class="summary"><i>ccm</i> datastore source - TODO: explain forms of <i>ccm</i> datasstore sources</p>
-    
-</dt>
-<dd>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type">object</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
 
 
     
@@ -2964,7 +2951,7 @@ An existing property 'store' and 'url' results in a <i>ccm</i> datastore of data
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on June 22nd 2016, 4:12:05 pm
+		on June 29th 2016, 3:34:56 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
